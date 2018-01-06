@@ -16,11 +16,11 @@
 
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/motorola/potter/full_potter.mk)
+$(call inherit-product, device/motorola/sanders/full_sanders.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 # for specific
-$(call inherit-product, vendor/motorola/potter/potter-vendor.mk)
+$(call inherit-product, vendor/motorola/sanders/sanders-vendor.mk)
 
 # Inherit some common CM stuff.
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
@@ -30,14 +30,15 @@ TARGET_SCREEN_WIDTH := 1080
 TARGET_SCREEN_HEIGHT := 1920
 
 ## Device identifier. This must come after all inclusions
-PRODUCT_DEVICE := potter
-PRODUCT_NAME := lineage_potter
-PRODUCT_BRAND := motorola
-PRODUCT_MANUFACTURER := motorola
+PRODUCT_DEVICE := sanders
+PRODUCT_NAME := lineage_sanders
+PRODUCT_BRAND := Motorola
+PRODUCT_MANUFACTURER := Motorola
 
 PRODUCT_SYSTEM_PROPERTY_BLACKLIST := ro.product.model
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    BUILD_FINGERPRINT=motorola/potter/potter:7.0/NPNS25.137-33-11/11:user/release-keys \
-    PRIVATE_BUILD_DESC="potter-7.0/NPNS25.137-33-11/11:user/release-keys" \
-    PRODUCT_NAME="Moto G5 Plus"
+    BUILD_FINGERPRINT=motorola/sanders/sanders:7.1.1/NPS26.116-45/51:user/release-keys \
+    PRIVATE_BUILD_DESC="sanders-7.1.1/NPS26.116-45/51:user/release-keys" \
+    PRODUCT_NAME="Moto G5S Plus"
+
