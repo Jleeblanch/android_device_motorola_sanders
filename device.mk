@@ -270,7 +270,7 @@ PRODUCT_COPY_FILES += \
 
 # Thermal
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/thermal-engine-potter.conf:system/etc/thermal-engine-potter.conf
+    $(LOCAL_PATH)/configs/thermal-engine-sanders.conf:system/etc/thermal-engine-sanders.conf
 
 # Wifi
 PRODUCT_PACKAGES += \
