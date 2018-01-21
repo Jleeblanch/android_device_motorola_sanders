@@ -202,7 +202,7 @@ on boot
     chown system system /sys/homebutton/enable_off
     chown system system /sys/homebutton/haptic
     chown system system /sys/homebutton/haptic_off
-    chown system system /sys/homebutton/proximity_check_off 
+    chown system system /sys/homebutton/proximity_check_off
     chown system system /sys/homebutton/key
     chown system system /sys/homebutton/key_hold
     chown system system /sys/homebutton/key_dbltap
@@ -834,6 +834,11 @@ service qcom-sh /system/bin/sh /init.qcom.sh
     user root
     oneshot
 
+service sensor-sh /system/bin/sh /init.qcom.sensors.sh
+    class core
+    user root
+    oneshot
+
 service atfwd /system/bin/ATFWD-daemon
     class late_start
     user system
@@ -867,7 +872,7 @@ service ril-daemon2 /system/bin/rild -c 2
     socket rild-debug2 stream 660 radio system
     user root
     group radio cache inet misc audio sdcard_r sdcard_rw qcom_diag diag log
-    
+
 service ril-daemon3 /system/bin/rild -c 3
     class main
     socket rild3 stream 660 root radio
